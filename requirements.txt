@@ -1,0 +1,9 @@
+certifi==2021.5.30
+dj-database-url==0.5.0
+Django==2.2.5
+gunicorn==20.1.0
+psycopg2==2.9.1
+psycopg2-binary==2.9.1
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+whitenoise==5.2.0
