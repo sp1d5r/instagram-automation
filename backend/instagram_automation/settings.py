@@ -9,12 +9,12 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+from pathlib import Path
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+REACT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(Path(__file__).resolve().parent))), 'frontend')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = '4z3k79p*+xzd%-bf7!4(2dq0=$-145uc^1a8in3m82e$*s4=re'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['instamation.herokuapp.com', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['instamation.herokuapp.com', '127.0.0.1', '0.0.0.0', 'localhost']
 
 
 # Application definition
@@ -125,10 +125,12 @@ PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
+
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(REACT_DIR, 'build/static'),
 )
+
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
