@@ -59,7 +59,7 @@ ROOT_URLCONF = 'instagram_automation.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'backend/templates')]
+        'DIRS': [os.path.join(REACT_DIR, 'build')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -118,6 +118,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -130,7 +131,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(REACT_DIR, 'build/static'),
 )
-
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
