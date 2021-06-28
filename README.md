@@ -1,26 +1,29 @@
-Instagram automation 
+# Instagram automation 
+
+Instagram automation software, this is part two of the [Instamation](https://github.com/sp1d5r/InstaMation) program i made. 
+Published on heroku this time, using React and Django.
+
+You should be able to see the webpage [here](http://instamation.herokuapp.com)
+
+But if you want to set up on your local machine follow the below [Installation guide](#installation---ubuntumac).
 
 
-Instructions - (Ubuntu)
+### Installation - (Ubuntu/MAC)
 
-(1) Setting up with ./setup.sh 
+(1) Setting up with ./setup.sh  (or ./setup-mac.sh for MAC) 
 * Navigate to project directory 
 * Give appropriate permissions to the ./setup.sh file 
 ```shell
 chmod + x setup.sh
 ```
-* run the file
+* run the file (Ubuntu)
 ```shell 
-  ./setup.sh
+  ./setup.sh 
+```
+* run the file (Mac)
+```shell 
+  ./setup-mac.sh 
 ```
 
-If that doesn't work, setup using normal way
-
-(1) Setting up python stuff
-* sudo apt-get install postgresql
-* sudo apt-get install libpq-dev
-* sudo apt-get install pipenv
-
-(2) Setting up virtual environment
-* python3 -m pipenv shell
-* python3 -m pipenv install
+If that doesn't work, setup using normal way. Go into the relevant setup.sh file and run commands manually, consider 
+using sudo (root) if that doesn't work.

@@ -18,10 +18,13 @@ class LabRat(models.Model):
     users you are trying to get to follow you.
     """
     username = models.CharField(max_length=30, primary_key=True)
-    interactions = ArrayField(JSONField)
+    interactions = ArrayField(JSONField(), blank=True)
     followers = models.IntegerField(default=0)
     following = models.IntegerField(default=0)
     bio_length = models.IntegerField(default=0)
+
+    def _str_(self):
+        return self.username
 
 
 """
@@ -36,9 +39,12 @@ interactions:
 
 class Researcher(models.Model):
     username = models.CharField(max_length=30, primary_key=True)
-    caught_rats = ArrayField(JSONField)
-    escaped_rats = ArrayField(JSONField)
-    processing_rats = ArrayField(JSONField)
+    caught_rats = ArrayField(JSONField(), blank=True)
+    escaped_rats = ArrayField(JSONField(), blank=True)
+    processing_rats = ArrayField(JSONField(), blank=True)
+
+    def _str_(self):
+        return self.username
 
 
 """
