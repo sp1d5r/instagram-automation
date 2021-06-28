@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
     'instamation',
 ]
 
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'instagram_automation.urls'
@@ -135,3 +138,7 @@ import dj_database_url
 prod_db = dj_database_url.config(conn_max_age=500)
 if 'NAME' in prod_db and prod_db['NAME']:
     DATABASES['default'].update(prod_db)
+
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000'
+]

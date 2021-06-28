@@ -12,15 +12,19 @@ But if you want to set up on your local machine follow the below [Installation g
 
 (1) Setting up with ./setup.sh  (or ./setup-mac.sh for MAC) 
 * Navigate to project directory 
-* Give appropriate permissions to the ./setup.sh file 
+* Give appropriate permissions to the ./setup.sh file (Ubuntu)
 ```shell
 chmod + x setup.sh
+```
+* Give appropriate permissions to the ./setup.sh file (MAC)
+```shell
+chmod + x setup-mac.sh
 ```
 * run the file (Ubuntu)
 ```shell 
   ./setup.sh 
 ```
-* run the file (Mac)
+* run the file (MAC)
 ```shell 
   ./setup-mac.sh 
 ```
