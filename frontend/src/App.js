@@ -1,25 +1,12 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-import axios from "axios";
+import {NavigationBar} from "./components/NavigationBar";
+
 
 function App() {
-  axios.get("/api/labrats/")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: "100%", height: 2000}}>
+      <NavigationBar username={"ElijahAhmad__"} userSelected={true}/>
     </div>
   );
 }
