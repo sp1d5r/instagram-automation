@@ -27,9 +27,8 @@ jobs:
             - name: Running npm build.
               run: npm run build --if-present
               working-directory: ${{env.working-directory}}
-
             - name: Commit New Build
-              run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME} && git add -A && git commit -m "GITHUB ACTIONS - ADDED BUILD"
+              run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME}} && git add -A && git commit -m "GITHUB ACTIONS - ADDED BUILD"
 
     deploy:
       needs: building-frontend
