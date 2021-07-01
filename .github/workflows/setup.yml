@@ -41,4 +41,4 @@ jobs:
             justlogin: true
         - run: |
              heroku container:login
-             git push heroku master
+             git push heroku HEAD:master
