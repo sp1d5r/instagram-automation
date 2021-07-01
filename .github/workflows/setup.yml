@@ -31,6 +31,9 @@ jobs:
               run: git add .
             - name: Showing added files
               run: git status
+            - name: Commiting changed files
+              run: git commit -m "GITHUB ACTIONS - ADDED BUILD."
+
     deploy:
         needs: building-frontend
         runs-on: ubuntu-latest
@@ -56,8 +59,6 @@ jobs:
               run: heroku git:remote --app $HEROKU_APP_NAME
               env:
                 HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME_STAGING }}
-            - name: Add build directory
-              run: git add .
             - name: Push to Heroku
               run: git push heroku HEAD:master
 
