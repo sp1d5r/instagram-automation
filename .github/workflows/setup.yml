@@ -3,7 +3,7 @@ name: Building the React App.
 on:
     [push]
 jobs:
-    build:
+    building-frontend:
 
         runs-on: ubuntu-latest
 
