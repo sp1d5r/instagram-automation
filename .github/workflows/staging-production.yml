@@ -1,10 +1,10 @@
-name: Building the React App.
+name: Building and Deploying Staging.
 
 on:
     [push]
 
 jobs:
-    building-frontend:
+    building-deploing-staging:
 
         runs-on: ubuntu-latest
 
