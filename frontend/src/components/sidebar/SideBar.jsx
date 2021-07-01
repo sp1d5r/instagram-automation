@@ -3,11 +3,9 @@ import {BiHomeAlt, GoDashboard, GiFishingNet, GiDisintegrate, IoAnalyticsOutline
 import './sidebar.css';
 
 export class SideBar extends React.Component {
-
     render() {
-        const href = window.location.href;
         return (
-            <div className="d-flex flex-column flex-shrink-0 p-3 " style={{width: "250px", backgroundColor: "#ffebfa", height: 500}}>
+            <div className="d-flex flex-column flex-shrink-0 p-3 " style={{width: "250px", backgroundColor: "#ffebfa", height: window.innerHeight}}>
                 <ul className="nav nav-pills flex-column mb-auto">
                     <li className="nav-item">
                         <a href="/" className={"nav-link " + (window.location.pathname.split("/")[1] === '' ? "active": "link-dark")} aria-current="page">
