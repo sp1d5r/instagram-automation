@@ -41,3 +41,4 @@ jobs:
             heroku_app_name: ${{secrets.HEROKU_APP_NAME_STAGING}}
             heroku_email: ${{secrets.USER_EMAIL}}
             usedocker: true
+            dontuseforce: true
