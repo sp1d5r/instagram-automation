@@ -52,6 +52,8 @@ jobs:
               run: heroku git:remote --app $HEROKU_APP_NAME
               env:
                 HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME_STAGING }}
+            - name: Add build directory
+                run: git add .
             - name: Push to Heroku
-              run: git push heroku HEAD:master
+              run: git push heroku
 
