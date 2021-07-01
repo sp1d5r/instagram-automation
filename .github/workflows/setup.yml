@@ -55,5 +55,5 @@ jobs:
             - name: Add build directory
               run: git add .
             - name: Push to Heroku
-              run: git push heroku
+              run: git push heroku HEAD:master
 
