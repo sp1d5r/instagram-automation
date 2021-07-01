@@ -25,7 +25,7 @@ SECRET_KEY = '4z3k79p*+xzd%-bf7!4(2dq0=$-145uc^1a8in3m82e$*s4=re'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['instamation.herokuapp.com', '127.0.0.1', '0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['instamation.herokuapp.com','instagram-automation-staging.herokuapp.com', '127.0.0.1', '0.0.0.0', 'localhost']
 
 
 # Application definition
