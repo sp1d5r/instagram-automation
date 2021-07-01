@@ -58,6 +58,5 @@ jobs:
                 HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME_STAGING }}
             - name: Push to Heroku
               run: |
-                git filter-branch -- --all
-                git push heroku master
+                git push heroku pipeline:master
 
