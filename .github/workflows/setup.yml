@@ -41,4 +41,4 @@ jobs:
             justlogin: true
         - run: |
              heroku container:login
-             # Run commands you would typically run from the heroku cli on your local machine to deploy your code
+             git push heroku master
