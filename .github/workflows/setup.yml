@@ -28,6 +28,9 @@ jobs:
               run: npm run build --if-present
               working-directory: ${{env.working-directory}}
 
+            - name: Commit New Build
+              run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME} && git add -A && git commit -m "GITHUB ACTIONS - ADDED BUILD"
+
     deploy:
       needs: building-frontend
       runs-on: ubuntu-latest
@@ -37,5 +40,5 @@ jobs:
           with:
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: ${{secrets.HEROKU_APP_NAME_STAGING}}
-            heroku_email: "aa1719@ic.ac.uk"
+            heroku_email: ${{secrets.USER_EMAIL}}
             usedocker: true
