@@ -16,7 +16,10 @@ jobs:
                 node-version: [10.x]
 
         steps:
-            - uses: actions/checkout@v2
+            - name: Checkout Repo
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
@@ -58,6 +61,5 @@ jobs:
                 HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME_STAGING }}
             - name: Push to Heroku
               run: |
-                git fetch --all --unshallow
                 git push heroku pipeline:master
 
