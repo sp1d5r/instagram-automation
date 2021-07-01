@@ -59,7 +59,8 @@ jobs:
               run: heroku git:remote --app $HEROKU_APP_NAME
               env:
                 HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME_STAGING }}
+            - uses: nelonoel/branch-name@v1
             - name: Push to Heroku
               run: |
-                git push --force heroku pipeline:master
+                git push --force heroku $BRANCH_NAME:master
 
