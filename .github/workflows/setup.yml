@@ -38,6 +38,7 @@ jobs:
             heroku_app_name: ${{secrets.HEROKU_APP_NAME_STAGING}}
             heroku_email: ${{secrets.USER_EMAIL}}
             usedocker: true
-            dontuseforce: true
-        - run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME}} && git add -A && git commit -m "GITHUB ACTIONS - ADDED BUILD"
-
+            justlogin: true
+        - run: |
+             heroku container:login
+             # Run commands you would typically run from the heroku cli on your local machine to deploy your code
