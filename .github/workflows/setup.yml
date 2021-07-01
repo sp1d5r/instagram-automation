@@ -29,6 +29,8 @@ jobs:
               working-directory: ${{env.working-directory}}
             - name: Adding new build files to git
               run: git add .
+            - name: Showing added files
+              run: git status
     deploy:
         needs: building-frontend
         runs-on: ubuntu-latest
