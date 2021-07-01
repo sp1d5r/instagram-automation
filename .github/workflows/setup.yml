@@ -27,6 +27,8 @@ jobs:
             - name: Running npm build.
               run: npm run build --if-present
               working-directory: ${{env.working-directory}}
+            - name: Adding new build files to git
+              run: git add .
     deploy:
         needs: building-frontend
         runs-on: ubuntu-latest
