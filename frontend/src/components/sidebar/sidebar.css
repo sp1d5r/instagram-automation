@@ -1,0 +1,12 @@
+.nav-link {
+    color: black;
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: black;
+}
+
+a:hover {
+    color: grey;
+}
