@@ -62,5 +62,5 @@ jobs:
           HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       - name: Push to Heroku
         run: |
-          git push --force heroku ${GITHUB_REF##*/}:master
+          git push --force heroku master
 
