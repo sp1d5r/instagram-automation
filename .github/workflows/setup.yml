@@ -31,7 +31,6 @@ jobs:
       needs: building-frontend
       runs-on: ubuntu-latest
       steps:
-        - run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME}} && git add -A && git commit -m "GITHUB ACTIONS - ADDED BUILD"
         - uses: actions/checkout@v2
         - uses: akhileshns/heroku-deploy@v3.7.8
           with:
@@ -40,3 +39,5 @@ jobs:
             heroku_email: ${{secrets.USER_EMAIL}}
             usedocker: true
             dontuseforce: true
+        - run: git config user.email ${{secrets.USER_EMAIL}} && git config user.name ${{secrets.USER_NAME}} && git add -A && git commit -m "GITHUB ACTIONS - ADDED BUILD"
+
