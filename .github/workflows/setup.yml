@@ -66,5 +66,5 @@ jobs:
               env:
                 HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME_STAGING }}
             - name: Push to Heroku
-              run: git push heroku HEAD:master
+              run: git push heroku HEAD:refs/heads/main
 
