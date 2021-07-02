@@ -25,7 +25,7 @@ SECRET_KEY = '4z3k79p*+xzd%-bf7!4(2dq0=$-145uc^1a8in3m82e$*s4=re'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['instamation.herokuapp.com', '127.0.0.1', '0.0.0.0', 'localhost']
+ALLOWED_HOSTS = ['instamation.herokuapp.com','instagram-automation-staging.herokuapp.com', '127.0.0.1', '0.0.0.0', 'localhost']
 
 
 # Application definition
@@ -55,7 +55,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'instagram_automation.urls'
-print(os.path.join(REACT_DIR, 'build'))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -123,9 +122,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
+print(PROJECT_ROOT)
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
 
+STATIC_URL = '/static/'
+print(STATIC_URL)
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
