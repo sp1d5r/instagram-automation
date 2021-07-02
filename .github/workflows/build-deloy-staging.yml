@@ -1,7 +1,9 @@
 name: Building and Deploying Staging.
 
 on:
-    [push]
+    push:
+      branches-ignore:
+        - master
 
 jobs:
     building-deploying-staging:
