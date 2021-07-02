@@ -2,7 +2,8 @@ name: Building and Deploying Production.
 
 on:
   push:
-    master
+    branches:
+      - master
 
 jobs:
   building-deploing-production:
