@@ -9,19 +9,24 @@ import {
 } from "react-router-dom";
 import {Dashboard} from "./components/dashboard/Dashboard";
 import {SideBar} from "./components/sidebar/SideBar";
+import {Home} from "./components/home/Home";
+import {PageWrap} from "./components/pagewrap/PageWrap";
 
 function App() {
   return (
     <Router style={{width: "100%", height: 2000}}>
       <NavigationBar username={"ElijahAhmad__"} userSelected={true}/>
       <SideBar/>
-      <Container>
-          <Switch>
-              <Route path={'/'}>
-                  <Dashboard />
-              </Route>
-          </Switch>
-      </Container>
+          <PageWrap style={{backgroundColor: "red"}}>
+              <Switch>
+                  <Route path={'/dashboard/'}>
+                      <Dashboard />
+                  </Route>
+                  <Route path={'/'}>
+                      <Home />
+                  </Route>
+              </Switch>
+          </PageWrap>
     </Router>
   );
 }
