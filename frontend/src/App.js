@@ -1,7 +1,6 @@
 import React from "react";
 import './App.css';
 import {NavigationBar} from "./components/NavigationBar";
-import {Container} from "react-bootstrap";
 import {
     BrowserRouter as Router,
     Switch,
