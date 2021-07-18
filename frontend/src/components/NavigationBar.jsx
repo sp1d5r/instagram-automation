@@ -5,7 +5,7 @@ export class NavigationBar extends React.Component{
 
     render() {
         return (
-            <Navbar style={{backgroundColor:"#ffebfa", borderBottom: "1px solid #8a6380", position: "fixed", width: "100%"}}>
+            <Navbar style={{backgroundColor:"#ffebfa", zIndex:1, borderBottom: "1px solid #8a6380", position: "fixed", width: "100%", top:0, left:0}}>
                 <Navbar.Brand href="/">Instamation</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
