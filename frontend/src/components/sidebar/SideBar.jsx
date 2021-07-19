@@ -11,7 +11,7 @@ export class SideBar extends React.Component {
                      height: window.innerHeight,
                      display: "table-column",
                      float:"left",
-                     zIndex: -1,
+                     zIndex: 0,
                      position: "fixed",
                      top: 0,
                      marginTop: 56,
