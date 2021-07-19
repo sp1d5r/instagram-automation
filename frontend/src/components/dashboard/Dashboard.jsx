@@ -1,10 +1,12 @@
 import React from "react";
+import {WelcomeCard, WelcomeDiv} from "./DashboardStyle";
 
 export class Dashboard extends React.Component {
-
     render() {
-        return (<div>
+        return (<WelcomeDiv>
+            <WelcomeCard>
 
-        </div>)
+            </WelcomeCard>
+        </WelcomeDiv>)
     }
 }

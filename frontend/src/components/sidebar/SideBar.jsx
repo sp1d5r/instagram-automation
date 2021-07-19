@@ -5,7 +5,19 @@ import './sidebar.css';
 export class SideBar extends React.Component {
     render() {
         return (
-            <div className="d-flex flex-column flex-shrink-0 p-3 " style={{width: "250px", backgroundColor: "#ffebfa", height: window.innerHeight}}>
+            <div className="d-flex flex-column flex-shrink-0 p-3 "
+                 style={{width: "20%",
+                     backgroundColor: "#ffebfa",
+                     height: window.innerHeight,
+                     display: "table-column",
+                     float:"left",
+                     zIndex: 0,
+                     position: "fixed",
+                     top: 0,
+                     marginTop: 56,
+                     overflowX: "hidden",
+                     borderRight: "1px solid #8a6380"
+                 }}>
                 <ul className="nav nav-pills flex-column mb-auto">
                     <li className="nav-item">
                         <a href="/" className={"nav-link " + (window.location.pathname.split("/")[1] === '' ? "active": "link-dark")} aria-current="page">
